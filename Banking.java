@@ -30,10 +30,14 @@ public class Banking {
 				/*Calls the withdraw method to enter the withdraw amount. Subtracts the withdraw amount from the balance.
 				The message dialog then shows the previous balance and the new balance */
 				else if(choice == 2) {
-					double withdraw = withdrawMethod(balance);
-					double prev = balance; 
-					balance = balance - withdraw;
-					JOptionPane.showMessageDialog(null,"Prev Balance: $" + prev + "\nNew Balance: $" + balance);
+					if(withdraw > balance){
+						JOptionPane.showMessageDialog(null, "Insufficient funds.");
+					}
+					else {
+						double prev = balance; 
+						balance = balance - withdraw;
+						JOptionPane.showMessageDialog(null,"Prev Balance: $" + prev + "\nNew Balance: $" + balance);
+					}
 				}
 				/*Calls the deposit method to enter the deposit amount. Adds the deposit amount to the balance.
 				The message dialog then shows the previous balance and the new balance */
