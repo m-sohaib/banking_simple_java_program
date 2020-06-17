@@ -1,1 +1,1 @@
-# banking_simple_java_program
+Fun java program exercise using a demonstration of loops, if-statements, methods and print statements. Overview: able to select an option from the message dialog such as see balance, withdraw, deposit, or exit. Does each action depending on the option selected. There is no exception handling.
